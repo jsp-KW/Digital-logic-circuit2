@@ -1,0 +1,20 @@
+module write_operation ( we,Addr, wEn);
+// module name is write_operation
+
+	input we; // write enable input 1bit 
+	input [2:0] Addr; // 3bit input write address
+	output [7:0] wEn; // 8bit output wEn
+	
+	wire [7:0] w_a; // 8bit wire 
+	
+	_3_to_8_decoder u0_decoder(.d(Addr), .q(w_a));
+	_and2 u1(we, w_a[0], wEn[0]);
+	_and2 u1(we, w_a[1], wEn[1]);
+	_and2 u1(we, w_a[2], wEn[2]);
+	_and2 u1(we, w_a[3], wEn[3]);
+	_and2 u1(we, w_a[4], wEn[4]);
+	_and2 u1(we, w_a[5], wEn[5]);
+	_and2 u1(we, w_a[6], wEn[6]);
+	_and2 u1(we, w_a[7], wEn[7]);
+	
+endmodule

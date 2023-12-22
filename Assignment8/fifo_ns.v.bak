@@ -1,0 +1,18 @@
+// module name is fifo_ns
+module fifo_ns (wr_en, rd_en, state, data_count, next_state)
+	input wr_en, rd_en;// input 1bit signals
+	input [2:0] state;// input 3bit signal
+	input [3:0] data_count;// input 4bit signal
+	
+	output reg[2:0]  next_state; // output reg 3bit signal
+	
+	
+	//define next_state with state transition diagram
+	
+	
+	
+	
+endmodule
+
+
+

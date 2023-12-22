@@ -1,0 +1,97 @@
+module cal_output_logic (clk, reset_n, multiplier,multiplicand,count,state,cal_result, op_done, next_count, next_cal_result);
+  input clk, reset_n; // 1bit input signal clk, reset_n
+  input [63:0] multiplicand, multiplier;// 64bit input signal
+  input [6:0] count;//7bit input signal count
+  input [1:0] state; // 2bit input signal
+  input [127:0] cal_result;// 128 bit input signal
+  
+  // output reg signal, save the op_done, next_count, next_cal_result , like use register
+  output reg op_done;
+  output reg [6:0] next_count;
+  output reg [127:0] next_cal_result;
+
+
+  reg prev_x, next_prev_x; //prev_x is x-1
+  wire [63:0] addition, subtraction, invertion;
+
+  //state encoding
+  parameter IDLE = 2'b00;
+  parameter EXEC = 2'b01;
+  parameter DONE = 2'b10;
+
+
+  // module instance//
+  // subtraction //
+  // setting inverse //
+  _inv_64bits inv_ins (.a(multiplicand), .y(invertion));
+  cla64 sub_ins (.a(cal_result[127:64]), .b(invertion), .ci(1'b1), .co(), .s(subtraction));
+
+  // addition//
+  cla64 add_ins (.a(cal_result[127:64]), .b(multiplicand), .ci(1'b0), .co(), .s(addition));
+
+  
+  // reset case.
+  //first case is 0, the other case is 
+  always @(posedge clk or negedge reset_n) begin
+    if (reset_n ==1'b0)  prev_x <= 0; //reset on, first case prev_x is  0
+    else prev_x <= next_prev_x;
+  end
+  
+	/* when change prev_x, multiplier, multiplicand, state, count, cal_result, next_cal_result, addition, subtraction */
+  always @(prev_x, multiplier, multiplicand, state, count, cal_result, next_cal_result, subtraction, addition) begin
+    case (state)
+      IDLE:
+        begin
+			 next_cal_result[63:0] <= multiplier; // init 0~63 bit with multiplier 
+			 next_cal_result[127:64] <= 64'h0; // init next_cal_result 64~127bit
+			 next_count <= 7'b0;  // next_count init with 0
+			 next_prev_x <=0;  op_done <= 0;	 // next_prev_x init with 0
+        end
+		  
+
+      EXEC: // when state is EXEC, calculate
+        begin
+          case ({cal_result[0], prev_x}) // xi,xi-1  case
+            2'b00 : //shift and connect result
+              begin
+                next_cal_result = {next_cal_result[127], next_cal_result[127:1]}; //connect result (shift)
+					 next_prev_x = cal_result[0]; //save next_prev_x, xi-1 update
+              end
+            2'b01: // add, shift with cla64 module instance result, and connect
+              begin
+                next_cal_result[127:64] = addition; // add
+                next_cal_result[63:0] = cal_result[63:0];
+                next_cal_result = {next_cal_result[127], next_cal_result[127:1]}; //connect result (shift)
+					 next_prev_x = cal_result[0]; //save next_prev_x, xi-1 update
+              end
+            2'b10: // sub, shift with cal64, inverter64 instance result
+              begin
+                next_cal_result[127:64] = subtraction; // sub
+                next_cal_result[63:0] = cal_result[63:0]; 
+                next_cal_result = {next_cal_result[127], next_cal_result[127:1]}; // connect result (shift)
+					 next_prev_x = cal_result[0];//save next_prev_x, xi-1 update
+              end
+				2'b11:
+					begin
+                next_cal_result = {next_cal_result[127], next_cal_result[127:1]}; //connect result (shift)
+					  next_prev_x = cal_result[0];//save next_prev_x, xi-1 update
+					end
+            default:// the other case, error exception
+              next_cal_result <= 128'hx;
+          endcase
+          next_count <= count + 1'b1; op_done <= 0; // count increment, op_done value 0 during EXEC STATE, progress computing
+        end
+
+      DONE:// finish state
+        begin
+          op_done <= 1; next_count <= count; next_cal_result <= cal_result;  // save result
+        end
+
+      default: //error state exception handling
+        begin
+          next_cal_result <= 128'hx; next_count <= 6'bx;  op_done = 1'bx;
+        end
+    endcase
+  end
+
+endmodule

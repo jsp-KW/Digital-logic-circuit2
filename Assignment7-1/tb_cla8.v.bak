@@ -1,0 +1,19 @@
+ 
+ `timescale 1ns/100ps
+ 
+ module tb_cla8;
+ 
+ reg [7:0] a, b; // 8-bit input signals
+   reg ci; // 1-bit input signal
+   wire [7:0] s; // 8-bit output signal
+   wire co; // 1-bit output signal
+
+   // Instantiate the cla8 module
+   cla8 u0 (.a(a), .b(b), .ci(ci), .s(s), .co(co));
+
+   
+   reg clk = 0;
+   always begin
+      #5 clk = ~clk;
+   end
+	

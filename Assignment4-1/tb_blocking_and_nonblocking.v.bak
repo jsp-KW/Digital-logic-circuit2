@@ -1,0 +1,51 @@
+module tb_blocking_and_nonblocking;
+
+  // Inputs
+  reg clk;
+  reg a;
+
+  // Outputs
+  wire b_blocking, c_blocking, d_blocking, e_blocking;
+  wire b_nonblocking, c_nonblocking, d_nonblocking, e_nonblocking;
+
+  // Instantiate the module under test
+  blocking_and_nonblocking uut (
+    .clk(clk),
+    .a(a),
+    .b(b_blocking),
+    .c(c_blocking),
+    .d(d_blocking),
+    .e(e_blocking)
+  );
+
+  // Clock generation
+  always #5 clk = ~clk;
+
+  // Test stimulus
+  initial begin
+    clk = 0;
+    a = 0;
+
+    // Apply inputs and observe outputs for blocking assignments
+    $display("Blocking Assignments:");
+    $display("Initial values: b=%b, c=%b, d=%b, e=%b", b_blocking, c_blocking, d_blocking, e_blocking);
+    a = 1;
+    #10;
+    $display("After a=1: b=%b, c=%b, d=%b, e=%b", b_blocking, c_blocking, d_blocking, e_blocking);
+    a = 0;
+    #10;
+    $display("After a=0: b=%b, c=%b, d=%b, e=%b", b_blocking, c_blocking, d_blocking, e_blocking);
+
+    // Apply inputs and observe outputs for non-blocking assignments
+    $display("Non-blocking Assignments:");
+    a = 1;
+    #10;
+    $display("After a=1: b=%b, c=%b, d=%b, e=%b", b_nonblocking, c_nonblocking, d_nonblocking, e_nonblocking);
+    a = 0;
+    #10;
+    $display("After a=0: b=%b, c=%b, d=%b, e=%b", b_nonblocking, c_nonblocking, d_nonblocking, e_nonblocking);
+
+    $finish;
+  end
+
+endmodule

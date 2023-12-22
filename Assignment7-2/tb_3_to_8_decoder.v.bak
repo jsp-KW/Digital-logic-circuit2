@@ -1,0 +1,22 @@
+`timescale 1ns/100ps // declare timescale
+module tb_3_to_8_decoder; // module name tb_write_operation
+	reg [2:0] tb_d; // 3bit reg tb_Addr
+	wire [7:0] tb_q; // 8bit wire tb_wEn
+	
+	_3_to_8_decoder test_3_to_8_decoder(.d(tb_d), .q(tb_q)); // testbench for _3_to_8_decoder
+
+	initial // execute only once
+		begin // begin block(start)
+		// set Write enable = 1 and confirm write Address in value each 5ns after
+			tb_d=3'b000; #10;
+			tb_d=3'b001; #10;
+			tb_d=3'b010; #10;
+			tb_d=3'b011; #10;
+			tb_d=3'b100; #10;
+			tb_d=3'b101; #10;
+			tb_d=3'b110; #10;
+			tb_d=3'b111; #10;
+
+			
+		end // end block(end)
+endmodule // end of module

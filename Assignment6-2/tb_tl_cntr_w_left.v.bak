@@ -1,0 +1,4 @@
+`timesclae 1ns/100ps
+
+// testbench module name is tb_tl_cntr_w_left
+module tb_tl_cntr_w_left;

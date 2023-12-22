@@ -1,0 +1,4 @@
+Warning (10273): Verilog HDL warning at cal_output_logic.v(80): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/Assignment9/cal_output_logic.v Line: 80
+Warning (10273): Verilog HDL warning at cal_output_logic.v(92): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/Assignment9/cal_output_logic.v Line: 92
+Warning (10268): Verilog HDL information at cal_output_logic.v(41): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Assignment9/cal_output_logic.v Line: 41
+Warning (10273): Verilog HDL warning at ns_logic.v(36): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/Assignment9/ns_logic.v Line: 36

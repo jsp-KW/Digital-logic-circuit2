@@ -1,0 +1,24 @@
+module modified_clb4 (p,g,ci,co);
+	input [3:0] p,g;
+	input ci;
+	output co;
+	wire [7:0] w;
+	// 4input and gate
+	
+	_and4 u0_and (.a(p[0]), .b(p[1]), .c(p[2]), .d(p[3]), .y(w[0]);
+	_and2 u1_and(.a(ci), .b(w[0]), .y(w[1]));
+
+	_and2 u2_and(.a(g[0]), .b(p[1]), .y(w[2]));
+	_or2 u3_or(.a(w[2]), .b(g[1]), .y(w[3]));
+	_and2 u4_and(.a(w[3]), .b(p[2]), .y(w[4]));
+	_or2 u5_or(.a(w[4]), .b(g[2]), .y(w[5]));
+	_and2 u6_and(.a(w[5]), .b(p[3]), .y(w[6]));
+	_or2 u7_or(.a(w[6]), .b(g[3]), .y(w[7]));
+	
+	_or2 cout_or (.a(w[1],.b(w[7]),.y(co));
+
+
+endmodule	
+	
+	
+	

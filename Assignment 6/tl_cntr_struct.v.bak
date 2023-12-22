@@ -1,0 +1,14 @@
+module tl_cntr_struct (clk, reset_n, Ta, Tb, La, Lb);
+	input clk, reset_n, Ta, Tb;
+	output [1:0] La, Lb;
+	wire D1,D0,Q1,Q0;
+	//ns_logic
+	
+	ns_logic cntr_ns_logic (.Q1(Q1), .Q0(Q0), .Ta(Ta), .Tb(Tb), .D1(D1), .D0(D0));
+	
+	//_register2_r_async
+	_register2_r_async cntr_reg(.D1(D1), .D0(D0), .clk(clk), .reset_n(reset_n), .Q1(Q1), .Q0(Q0));
+	//o_logic
+	o_logic cntr_output (.Q1(Q1), .Q0(Q0), .La(La), .Lb(Lb));
+	
+endmodule

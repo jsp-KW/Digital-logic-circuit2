@@ -1,0 +1,11 @@
+module tl_cntr (clk, reset_n, Ta, Tb, La, Lb);
+	input clk, reset_n, Ta, Tb;
+	output [1:0] La, Lb;
+	
+	//ns_logic
+	
+	ns_logic cntr_ns_logic (.a
+	//_register2_r_async
+	
+	//o_logic
+	

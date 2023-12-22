@@ -1,0 +1,33 @@
+`timescale 1ns/100ps 
+
+module tb_shifter8; // testbench module name tb_shifter8
+	reg tb_clk, tb_reset_n; // 1bit reg 
+	reg [2:0] tb_op; // 3bit reg 
+	reg [1:0] tb_shamt; // 2bit reg 
+	reg [7:0] tb_d_in; // 8bit reg 
+	wire [7:0] tb_d_out; // 8bit wire
+
+	shifter8 test(tb_clk, tb_reset_n, tb_op, tb_shamt, tb_d_in, tb_d_out); // testbench for shifter8
+	
+	
+	
+   always #5 tb_clk=~tb_clk; // clock setting
+
+	initial 
+	begin //test verificate
+		tb_clk=0; tb_reset_n=0; tb_shamt=2'b00; tb_d_in=8'b00000000; // initial setting
+		tb_op=3'b000; #10; // NOP 0000
+		
+		tb_reset_n=1; 
+		tb_op=3'b001; tb_d_in=8'b11001100; #10; // LOAD
+		
+		tb_op=3'b010; tb_shamt=2'b01; #10; // LSL 1
+		tb_op=3'b011; tb_shamt=2'b10; #10; // LSR 2
+		tb_op=3'b100; tb_shamt=2'b11; #10; // ASR 3
+		
+		tb_op=3'b001; tb_d_in=8'b11111111; #10; //LOAD
+		
+		
+		$stop; 
+	end 
+endmodule 

@@ -1,0 +1,9 @@
+module mx2_32bits(d0, d1, s, y); // module name mx2_32bits
+
+input [31:0] d0, d1; // 32bit input variable d0, d1
+input s; // 1bit input variable s
+output [31:0] y; // 32bit output variable y
+
+assign y=(s==0)?d0:d1; // assign to use 3-conditional operator
+
+endmodule // end of module

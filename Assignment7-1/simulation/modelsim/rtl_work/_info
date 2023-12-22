@@ -1,0 +1,625 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/Assignment7-1/simulation/modelsim
+v_and2
+Z1 !s110 1697857997
+!i10b 1
+!s100 A4B5nB[;@dfgGW6GF5Xdd3
+IXNbI=nZCJe0RJ@32dFfh`2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1696551118
+Z4 8C:/intelFPGA_lite/18.1/Assignment7-1/gates.v
+Z5 FC:/intelFPGA_lite/18.1/Assignment7-1/gates.v
+L0 18
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1697857997.000000
+Z8 !s107 C:/intelFPGA_lite/18.1/Assignment7-1/gates.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/gates.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1
+Z12 tCvgOpt 0
+n@_and2
+v_and2_32bits
+R1
+!i10b 1
+!s100 TkK]EeIfDficnQm>BfRY^3
+I<eXmLAz@7WH6dg?0WVbk`2
+R2
+R0
+R3
+R4
+R5
+L0 157
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_and2_32bits
+v_and2_4bits
+R1
+!i10b 1
+!s100 IH35j^X]?;kRT[fFBDZ]12
+IYGHcho@LH0bQK[>JTJ;:d2
+R2
+R0
+R3
+R4
+R5
+L0 116
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_and2_4bits
+v_and3
+R1
+!i10b 1
+!s100 JJAfBP3b``nGm3XQL1l;G3
+IE:j2OEz0NQoS@gmdbLJ1=3
+R2
+R0
+R3
+R4
+R5
+L0 61
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_and3
+v_and4
+R1
+!i10b 1
+!s100 MTM2]ZJkoYjm^J@@LUQ>o1
+Imha^4<Ez`do@ocTJVFH5=2
+R2
+R0
+R3
+R4
+R5
+L0 70
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_and4
+v_and5
+R1
+!i10b 1
+!s100 <@SOfi;S^GRERIY>bK3nK2
+Ia;VfIie[]:eMWlXf@T?b?0
+R2
+R0
+R3
+R4
+R5
+L0 79
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_and5
+v_inv
+R1
+!i10b 1
+!s100 `>JJVH3ZdMMBcD5O?6WU52
+I]<ZCdicLn0=X@PVUY0ZX92
+R2
+R0
+R3
+R4
+R5
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_inv
+v_inv_32bits
+R1
+!i10b 1
+!s100 3[BS2GInZL:n5IT]in5iK3
+IRk>I8jG5S3^KGcfQDmT4k1
+R2
+R0
+R3
+R4
+R5
+L0 151
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_inv_32bits
+v_inv_4bits
+R1
+!i10b 1
+!s100 8zmY_V5G74lJ;lDk7@<HM2
+Ijj?eL;9A]_kM=d;1<Jc]L1
+R2
+R0
+R3
+R4
+R5
+L0 109
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_inv_4bits
+v_nand2
+R1
+!i10b 1
+!s100 _nA2nBA86iaQ=@b?_Y[dC0
+IDfg]C4`L;:Gh:Jkdi`<UN3
+R2
+R0
+R3
+R4
+R5
+L0 10
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_nand2
+v_or2
+R1
+!i10b 1
+!s100 <V0FMB6EnP@S@Vzd1B4_62
+I?B9m<:`<VR92B[VcCn77b3
+R2
+R0
+R3
+R4
+R5
+L0 26
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or2
+v_or2_32bits
+R1
+!i10b 1
+!s100 j5Nm05ILeG=X>B]@lYeVJ3
+IMlE]mgNl>Nc<JY56h6Aln3
+R2
+R0
+R3
+R4
+R5
+L0 163
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or2_32bits
+v_or2_4bits
+R1
+!i10b 1
+!s100 :`hzKoG:WN^f`:UHfkNP?2
+IIgnZlcfX5^fg>_<7e0QfO0
+R2
+R0
+R3
+R4
+R5
+L0 123
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or2_4bits
+v_or3
+R1
+!i10b 1
+!s100 dJKP3K:6Y9>lM6gz2=HLc0
+IKfm9;a<[_SYK]ACJjQH4Z1
+R2
+R0
+R3
+R4
+R5
+L0 87
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or3
+v_or4
+R1
+!i10b 1
+!s100 YTJg7UoVi2ogg>C3AS]Qd0
+IKL>k5V^b0<JOi1b=4>LTS1
+R2
+R0
+R3
+R4
+R5
+L0 94
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or4
+v_or5
+R1
+!i10b 1
+!s100 >JdfoLQChHN]`hSjdW>Tf3
+Ibabd<i@8>@2^:c@1m3YhX1
+R2
+R0
+R3
+R4
+R5
+L0 101
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_or5
+v_xnor2_32bits
+R1
+!i10b 1
+!s100 WA_o90iBh`UE:]zF7Oa=h3
+IbQfzkDI6?A1^J`zClb6`j2
+R2
+R0
+R3
+R4
+R5
+L0 183
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_xnor2_32bits
+v_xnor2_4bits
+R1
+!i10b 1
+!s100 FoeGe5`BZ5mM]MBW47n:Y0
+IkoQ9jefkkl2C]@;aKfE5Y0
+R2
+R0
+R3
+R4
+R5
+L0 140
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_xnor2_4bits
+v_xor2
+R1
+!i10b 1
+!s100 AAAl1_HfkL0Hz0^=B;3el0
+I9LoCHMB5A0UdBZPCFjXYn3
+R2
+R0
+R3
+R4
+R5
+L0 36
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_xor2
+v_xor2_32bits
+R1
+!i10b 1
+!s100 50NzQ:mm1MNDRV3J_22OF0
+IkKHaLPamROPnD=A?m@IHH2
+R2
+R0
+R3
+R4
+R5
+L0 169
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_xor2_32bits
+v_xor2_4bits
+R1
+!i10b 1
+!s100 41O;jkeciBRGWQ_JLJ8@D3
+IbUEDf<KIl4n3dU?f>PGV?1
+R2
+R0
+R3
+R4
+R5
+L0 130
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@_xor2_4bits
+vcla4
+R1
+!i10b 1
+!s100 J1G4hFeKMoeHAeP<6Q[]R3
+IaH]zXGm_KICLK?C>PoUMh1
+R2
+R0
+w1695972932
+8C:/intelFPGA_lite/18.1/Assignment7-1/cla4.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/cla4.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/cla4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/cla4.v|
+!i113 1
+R10
+R11
+R12
+vcla8
+R1
+!i10b 1
+!s100 5O:DL83Kik5:d`^aV^[IZ0
+IJBjIJ@dWd>E5cnA7cRdNl3
+R2
+R0
+w1697727693
+8C:/intelFPGA_lite/18.1/Assignment7-1/cla8.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/cla8.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/cla8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/cla8.v|
+!i113 1
+R10
+R11
+R12
+vclb4
+R1
+!i10b 1
+!s100 D1:GS6ikkhWzca[QFz1^n2
+IFT4;K>AP0n9gV1J2SkIH;2
+R2
+R0
+w1696395546
+8C:/intelFPGA_lite/18.1/Assignment7-1/clb4.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/clb4.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/clb4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/clb4.v|
+!i113 1
+R10
+R11
+R12
+vfa_v2
+R1
+!i10b 1
+!s100 X68Q;[i720mBac;OlKM;U0
+I^gQl2R^JA7hJSnXc;6>7A0
+R2
+R0
+w1695926600
+8C:/intelFPGA_lite/18.1/Assignment7-1/fa_v2.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/fa_v2.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1697857996.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/fa_v2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/fa_v2.v|
+!i113 1
+R10
+R11
+R12
+vos_logic
+Z13 !s110 1697857998
+!i10b 1
+!s100 n08AXBgdj1TmO8=eW9VR12
+Ij2RVzF3TA[?jGdi6]gk>41
+R2
+R0
+w1697818243
+8C:/intelFPGA_lite/18.1/Assignment7-1/os_logic.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/os_logic.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z14 !s108 1697857998.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/os_logic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/os_logic.v|
+!i113 1
+R10
+R11
+R12
+vtb_os_logic
+R13
+!i10b 1
+!s100 _IiEQ=a[_4fN::Yb0QbS90
+I?Vz>cR<2fZ``SBUSHB_9Q0
+R2
+R0
+w1697774189
+8C:/intelFPGA_lite/18.1/Assignment7-1/tb_os_logic.v
+FC:/intelFPGA_lite/18.1/Assignment7-1/tb_os_logic.v
+L0 2
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/intelFPGA_lite/18.1/Assignment7-1/tb_os_logic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment7-1|C:/intelFPGA_lite/18.1/Assignment7-1/tb_os_logic.v|
+!i113 1
+R10
+R11
+R12

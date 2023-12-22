@@ -1,0 +1,31 @@
+`timescale 1ns/100ps
+
+module tb_tl_cntr_w_left_struct;
+   
+   reg clk,reset_n,Ta,Tb,Tal,Tbl;      // 1bit reg
+   wire [1:0]La,Lb;            //2 bit  wire
+   
+   tl_cntr_w_left_struct test_tl_cntr_w_left_struct(clk,reset_n,Ta,Tb,Tal,Tbl,La,Lb);      //test module
+   
+   //make clock
+   always begin
+   #5; clk=~clk;
+   end
+   
+   initial begin
+      //when reset_n is 0
+      clk=0; reset_n=0; Ta=0; Tb=0; Tal=0; Tbl=0;
+      
+      //when reset_n is 1
+      #10; reset_n=1;
+      #53; Ta=1;
+      #30; Ta=0; Tal=1;
+      #30; Tal=0; Tb=1;
+      #30; Tb=0; Tbl=1;
+      #30; Tbl=0;
+      
+      //when reset_n is 0
+      #30; reset_n=0;
+      
+      end
+endmodule

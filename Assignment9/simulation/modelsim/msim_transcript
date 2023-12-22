@@ -1,0 +1,163 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do multiplier_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/cal_output_logic.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:15 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/cal_output_logic.v 
+# -- Compiling module cal_output_logic
+# 
+# Top level modules:
+# 	cal_output_logic
+# End time: 10:28:15 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/fa_v2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:15 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/fa_v2.v 
+# -- Compiling module fa_v2
+# 
+# Top level modules:
+# 	fa_v2
+# End time: 10:28:15 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/clb4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:15 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/clb4.v 
+# -- Compiling module clb4
+# 
+# Top level modules:
+# 	clb4
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/cla32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:16 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/cla32.v 
+# -- Compiling module cla32
+# 
+# Top level modules:
+# 	cla32
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/cla4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:16 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/cla4.v 
+# -- Compiling module cla4
+# 
+# Top level modules:
+# 	cla4
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/gates.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:16 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/gates.v 
+# -- Compiling module _inv
+# -- Compiling module _nand2
+# -- Compiling module _and2
+# -- Compiling module _or2
+# -- Compiling module _xor2
+# -- Compiling module _and3
+# -- Compiling module _and4
+# -- Compiling module _and5
+# -- Compiling module _or3
+# -- Compiling module _or4
+# -- Compiling module _or5
+# -- Compiling module _inv_4bits
+# -- Compiling module _and2_4bits
+# -- Compiling module _or2_4bits
+# -- Compiling module _xor2_4bits
+# -- Compiling module _xnor2_4bits
+# -- Compiling module _inv_32bits
+# -- Compiling module _and2_32bits
+# -- Compiling module _or2_32bits
+# -- Compiling module _xor2_32bits
+# -- Compiling module _xnor2_32bits
+# -- Compiling module _inv_64bits
+# 
+# Top level modules:
+# 	_nand2
+# 	_and3
+# 	_and4
+# 	_and5
+# 	_or3
+# 	_or4
+# 	_or5
+# 	_and2_4bits
+# 	_or2_4bits
+# 	_inv_32bits
+# 	_and2_32bits
+# 	_or2_32bits
+# 	_xor2_32bits
+# 	_xnor2_32bits
+# 	_inv_64bits
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/cla64.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:16 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/cla64.v 
+# -- Compiling module cla64
+# 
+# Top level modules:
+# 	cla64
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment9 {C:/intelFPGA_lite/18.1/Assignment9/tb_cal_output_logic.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:28:16 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/Assignment9" C:/intelFPGA_lite/18.1/Assignment9/tb_cal_output_logic.v 
+# -- Compiling module tb_cal_output_logic
+# 
+# Top level modules:
+# 	tb_cal_output_logic
+# End time: 10:28:16 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_cal_output_logic
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_cal_output_logic 
+# Start time: 10:28:17 on Nov 22,2023
+# Loading work.tb_cal_output_logic
+# Loading work.cal_output_logic
+# Loading work._inv_64bits
+# Loading work.cla64
+# Loading work.cla32
+# Loading work.cla4
+# Loading work.fa_v2
+# Loading work._xor2
+# Loading work._inv
+# Loading work._and2
+# Loading work._or2
+# Loading work.clb4
+# Loading work._and3
+# Loading work._or3
+# Loading work._and4
+# Loading work._or4
+# Loading work._and5
+# Loading work._or5
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/intelFPGA_lite/18.1/Assignment9/tb_cal_output_logic.v(66)
+#    Time: 190 ns  Iteration: 0  Instance: /tb_cal_output_logic
+# Break in Module tb_cal_output_logic at C:/intelFPGA_lite/18.1/Assignment9/tb_cal_output_logic.v line 66
+# End time: 15:00:15 on Nov 22,2023, Elapsed time: 4:31:58
+# Errors: 0, Warnings: 0

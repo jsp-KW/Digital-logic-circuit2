@@ -1,0 +1,41 @@
+`timescale 1ns/100ps
+
+module tb_dff_en;
+    reg tb_clk, tb_en, tb_d;
+    wire tb_q;
+
+    _dff_en test_en (.clk(tb_clk), .en(tb_en), .d(tb_d), .q(tb_q));
+
+    always begin
+        #10 tb_clk = ~tb_clk; // Toggle clock signal every 4 time units
+    end
+
+    initial begin
+        tb_clk = 0; // Initialize clock signal to 0
+        tb_en = 0;  // Initialize enable signal to 0
+        tb_d = 0;   // Initialize data signal to 0
+
+        #1 tb_en = 1; // Enable flip-flop
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+
+        #2 tb_en = 0; // Enable flip-flop
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+		  
+		  #3 tb_en = 1; // Enable flip-flop
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+
+        #1 tb_en = 0; // Enable flip-flop
+        #1 tb_d = 0; // Update flip-flop with "d" = 0
+        #1 tb_d = 1; // Update flip-flop with "d" = 1
+
+        // Stop the simulation
+        #20 $stop;
+    end
+endmodule

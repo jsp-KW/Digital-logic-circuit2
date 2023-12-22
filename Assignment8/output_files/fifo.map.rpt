@@ -1,0 +1,502 @@
+Analysis & Synthesis report for fifo
+Sun Nov 05 19:15:29 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: fifo_ns:fifo_next_instance
+ 11. Parameter Settings for User Entity Instance: fifo_cal_addr:fifo_cal_instance
+ 12. Parameter Settings for User Entity Instance: fifo_out:fifo_out_instance
+ 13. Port Connectivity Checks: "register32_r_en:fifo_out_register"
+ 14. Port Connectivity Checks: "mx2_32bits:fifo_mx2_32"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Nov 05 19:15:29 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; fifo                                        ;
+; Top-level Entity Name           ; fifo                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 301                                         ;
+; Total pins                      ; 78                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; fifo               ; fifo               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; _dff_r.v                         ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/_dff_r.v          ;         ;
+; register32_8.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/register32_8.v    ;         ;
+; gates.v                          ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/gates.v           ;         ;
+; _8_to_1_MUX.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/_8_to_1_MUX.v     ;         ;
+; _3_to_8_decoder.v                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/_3_to_8_decoder.v ;         ;
+; write_operation.v                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/write_operation.v ;         ;
+; register32_r_en.v                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/register32_r_en.v ;         ;
+; Register_file.v                  ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/Register_file.v   ;         ;
+; read_operation.v                 ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/read_operation.v  ;         ;
+; fifo.v                           ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/fifo.v            ;         ;
+; fifo_out.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/fifo_out.v        ;         ;
+; fifo_ns.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/fifo_ns.v         ;         ;
+; _register3_r.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/_register3_r.v    ;         ;
+; mx2_32bits.v                     ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/mx2_32bits.v      ;         ;
+; _register4_r.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/_register4_r.v    ;         ;
+; fifo_cal_addr.v                  ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Assignment8/fifo_cal_addr.v   ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 196       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 144       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 87        ;
+;     -- 5 input functions                    ; 9         ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 43        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 301       ;
+;                                             ;           ;
+; I/O pins                                    ; 78        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 301       ;
+; Total fan-out                               ; 2034      ;
+; Average fan-out                             ; 3.38      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name     ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |fifo                                       ; 144 (0)             ; 301 (0)                   ; 0                 ; 0          ; 78   ; 0            ; |fifo                                                                                            ; fifo            ; work         ;
+;    |Register_file:fifo_reg_file|            ; 8 (0)               ; 256 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file                                                                ; Register_file   ; work         ;
+;       |register32_8:sub_register32_8|       ; 0 (0)               ; 256 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8                                  ; register32_8    ; work         ;
+;          |register32_r_en:u0|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u0               ; register32_r_en ; work         ;
+;          |register32_r_en:u1|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u1               ; register32_r_en ; work         ;
+;          |register32_r_en:u2|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u2               ; register32_r_en ; work         ;
+;          |register32_r_en:u3|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u3               ; register32_r_en ; work         ;
+;          |register32_r_en:u4|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u4               ; register32_r_en ; work         ;
+;          |register32_r_en:u5|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u5               ; register32_r_en ; work         ;
+;          |register32_r_en:u6|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u6               ; register32_r_en ; work         ;
+;          |register32_r_en:u7|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u7               ; register32_r_en ; work         ;
+;       |write_operation:sub_write_operation| ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|write_operation:sub_write_operation                            ; write_operation ; work         ;
+;          |_3_to_8_decoder:u0_decoder|       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|Register_file:fifo_reg_file|write_operation:sub_write_operation|_3_to_8_decoder:u0_decoder ; _3_to_8_decoder ; work         ;
+;    |_register3_r:fifo_head|                 ; 1 (0)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_head                                                                     ; _register3_r    ; work         ;
+;       |_dff_r:u0|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_head|_dff_r:u0                                                           ; _dff_r          ; work         ;
+;       |_dff_r:u1|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_head|_dff_r:u1                                                           ; _dff_r          ; work         ;
+;       |_dff_r:u2|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_head|_dff_r:u2                                                           ; _dff_r          ; work         ;
+;    |_register3_r:fifo_state|                ; 0 (0)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_state                                                                    ; _register3_r    ; work         ;
+;       |_dff_r:u0|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_state|_dff_r:u0                                                          ; _dff_r          ; work         ;
+;       |_dff_r:u1|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_state|_dff_r:u1                                                          ; _dff_r          ; work         ;
+;       |_dff_r:u2|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_state|_dff_r:u2                                                          ; _dff_r          ; work         ;
+;    |_register3_r:fifo_tail|                 ; 0 (0)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_tail                                                                     ; _register3_r    ; work         ;
+;       |_dff_r:u0|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_tail|_dff_r:u0                                                           ; _dff_r          ; work         ;
+;       |_dff_r:u1|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_tail|_dff_r:u1                                                           ; _dff_r          ; work         ;
+;       |_dff_r:u2|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register3_r:fifo_tail|_dff_r:u2                                                           ; _dff_r          ; work         ;
+;    |_register4_r:fifo_data_count|           ; 1 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register4_r:fifo_data_count                                                               ; _register4_r    ; work         ;
+;       |_dff_r:u0|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register4_r:fifo_data_count|_dff_r:u0                                                     ; _dff_r          ; work         ;
+;       |_dff_r:u1|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register4_r:fifo_data_count|_dff_r:u1                                                     ; _dff_r          ; work         ;
+;       |_dff_r:u2|                           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register4_r:fifo_data_count|_dff_r:u2                                                     ; _dff_r          ; work         ;
+;       |_dff_r:u3|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|_register4_r:fifo_data_count|_dff_r:u3                                                     ; _dff_r          ; work         ;
+;    |fifo_cal_addr:fifo_cal_instance|        ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|fifo_cal_addr:fifo_cal_instance                                                            ; fifo_cal_addr   ; work         ;
+;    |fifo_ns:fifo_next_instance|             ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|fifo_ns:fifo_next_instance                                                                 ; fifo_ns         ; work         ;
+;    |fifo_out:fifo_out_instance|             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|fifo_out:fifo_out_instance                                                                 ; fifo_out        ; work         ;
+;    |mx2_32bits:fifo_mx2_32|                 ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fifo|mx2_32bits:fifo_mx2_32                                                                     ; mx2_32bits      ; work         ;
+;    |register32_r_en:fifo_out_register|      ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |fifo|register32_r_en:fifo_out_register                                                          ; register32_r_en ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 301   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 301   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 265   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |fifo|_register3_r:fifo_head|_dff_r:u2|q       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |fifo|_register3_r:fifo_tail|_dff_r:u2|q       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |fifo|_register4_r:fifo_data_count|_dff_r:u2|q ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 160 LEs              ; 32 LEs                 ; Yes        ; |fifo|register32_r_en:fifo_out_register|q[8]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo_ns:fifo_next_instance ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; INIT           ; 000   ; Unsigned Binary                                ;
+; NO_OP          ; 001   ; Unsigned Binary                                ;
+; WRITE          ; 010   ; Unsigned Binary                                ;
+; WR_ERROR       ; 011   ; Unsigned Binary                                ;
+; READ           ; 100   ; Unsigned Binary                                ;
+; RD_ERROR       ; 101   ; Unsigned Binary                                ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo_cal_addr:fifo_cal_instance ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; INIT           ; 000   ; Unsigned Binary                                     ;
+; NO_OP          ; 001   ; Unsigned Binary                                     ;
+; WRITE          ; 010   ; Unsigned Binary                                     ;
+; WR_ERROR       ; 011   ; Unsigned Binary                                     ;
+; READ           ; 100   ; Unsigned Binary                                     ;
+; RD_ERROR       ; 101   ; Unsigned Binary                                     ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo_out:fifo_out_instance ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; INIT           ; 000   ; Unsigned Binary                                ;
+; NO_OP          ; 001   ; Unsigned Binary                                ;
+; WRITE          ; 010   ; Unsigned Binary                                ;
+; WR_ERROR       ; 011   ; Unsigned Binary                                ;
+; READ           ; 100   ; Unsigned Binary                                ;
+; RD_ERROR       ; 101   ; Unsigned Binary                                ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "register32_r_en:fifo_out_register" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "mx2_32bits:fifo_mx2_32" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; d0   ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 301                         ;
+;     CLR               ; 4                           ;
+;     CLR SCLR          ; 32                          ;
+;     ENA CLR           ; 265                         ;
+; arriav_lcell_comb     ; 145                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 144                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 87                          ;
+; boundary_port         ; 78                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.84                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Nov 05 19:15:09 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fifo -c fifo
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file _dff_r.v
+    Info (12023): Found entity 1: _dff_r File: C:/intelFPGA_lite/18.1/Assignment8/_dff_r.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register32_8.v
+    Info (12023): Found entity 1: register32_8 File: C:/intelFPGA_lite/18.1/Assignment8/register32_8.v Line: 1
+Info (12021): Found 21 design units, including 21 entities, in source file gates.v
+    Info (12023): Found entity 1: _inv File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 2
+    Info (12023): Found entity 2: _nand2 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 10
+    Info (12023): Found entity 3: _and2 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 18
+    Info (12023): Found entity 4: _or2 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 26
+    Info (12023): Found entity 5: _xor2 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 36
+    Info (12023): Found entity 6: _and3 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 61
+    Info (12023): Found entity 7: _and4 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 70
+    Info (12023): Found entity 8: _and5 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 79
+    Info (12023): Found entity 9: _or3 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 87
+    Info (12023): Found entity 10: _or4 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 94
+    Info (12023): Found entity 11: _or5 File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 101
+    Info (12023): Found entity 12: _inv_4bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 109
+    Info (12023): Found entity 13: _and2_4bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 116
+    Info (12023): Found entity 14: _or2_4bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 123
+    Info (12023): Found entity 15: _xor2_4bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 130
+    Info (12023): Found entity 16: _xnor2_4bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 140
+    Info (12023): Found entity 17: _inv_32bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 151
+    Info (12023): Found entity 18: _and2_32bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 157
+    Info (12023): Found entity 19: _or2_32bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 163
+    Info (12023): Found entity 20: _xor2_32bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 169
+    Info (12023): Found entity 21: _xnor2_32bits File: C:/intelFPGA_lite/18.1/Assignment8/gates.v Line: 183
+Info (12021): Found 1 design units, including 1 entities, in source file _8_to_1_mux.v
+    Info (12023): Found entity 1: _8_to_1_MUX File: C:/intelFPGA_lite/18.1/Assignment8/_8_to_1_MUX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file _3_to_8_decoder.v
+    Info (12023): Found entity 1: _3_to_8_decoder File: C:/intelFPGA_lite/18.1/Assignment8/_3_to_8_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file write_operation.v
+    Info (12023): Found entity 1: write_operation File: C:/intelFPGA_lite/18.1/Assignment8/write_operation.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register32_r_en.v
+    Info (12023): Found entity 1: register32_r_en File: C:/intelFPGA_lite/18.1/Assignment8/register32_r_en.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: Register_file File: C:/intelFPGA_lite/18.1/Assignment8/Register_file.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file read_operation.v
+    Info (12023): Found entity 1: read_operation File: C:/intelFPGA_lite/18.1/Assignment8/read_operation.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
+    Info (12023): Found entity 1: fifo File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file fifo_out.v
+    Info (12023): Found entity 1: fifo_out File: C:/intelFPGA_lite/18.1/Assignment8/fifo_out.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file fifo_ns.v
+    Info (12023): Found entity 1: fifo_ns File: C:/intelFPGA_lite/18.1/Assignment8/fifo_ns.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file _register3_r.v
+    Info (12023): Found entity 1: _register3_r File: C:/intelFPGA_lite/18.1/Assignment8/_register3_r.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mx2_32bits.v
+    Info (12023): Found entity 1: mx2_32bits File: C:/intelFPGA_lite/18.1/Assignment8/mx2_32bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file _register4_r.v
+    Info (12023): Found entity 1: _register4_r File: C:/intelFPGA_lite/18.1/Assignment8/_register4_r.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fifo_cal_addr.v
+    Info (12023): Found entity 1: fifo_cal_addr File: C:/intelFPGA_lite/18.1/Assignment8/fifo_cal_addr.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fifo.v
+    Info (12023): Found entity 1: tb_fifo File: C:/intelFPGA_lite/18.1/Assignment8/tb_fifo.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fifo_out.v
+    Info (12023): Found entity 1: tb_fifo_out File: C:/intelFPGA_lite/18.1/Assignment8/tb_fifo_out.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fifo_ns.v
+    Info (12023): Found entity 1: tb_fifo_ns File: C:/intelFPGA_lite/18.1/Assignment8/tb_fifo_ns.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fifo_cal_addr.v
+    Info (12023): Found entity 1: tb_fifo_cal_addr File: C:/intelFPGA_lite/18.1/Assignment8/tb_fifo_cal_addr.v Line: 3
+Info (12127): Elaborating entity "fifo" for the top level hierarchy
+Info (12128): Elaborating entity "fifo_ns" for hierarchy "fifo_ns:fifo_next_instance" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 28
+Info (12128): Elaborating entity "_register3_r" for hierarchy "_register3_r:fifo_state" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 34
+Info (12128): Elaborating entity "_dff_r" for hierarchy "_register3_r:fifo_state|_dff_r:u0" File: C:/intelFPGA_lite/18.1/Assignment8/_register3_r.v Line: 10
+Info (12128): Elaborating entity "_register4_r" for hierarchy "_register4_r:fifo_data_count" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 35
+Info (12128): Elaborating entity "fifo_cal_addr" for hierarchy "fifo_cal_addr:fifo_cal_instance" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 40
+Info (12128): Elaborating entity "fifo_out" for hierarchy "fifo_out:fifo_out_instance" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 43
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:fifo_reg_file" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 48
+Info (12128): Elaborating entity "register32_8" for hierarchy "Register_file:fifo_reg_file|register32_8:sub_register32_8" File: C:/intelFPGA_lite/18.1/Assignment8/Register_file.v Line: 16
+Info (12128): Elaborating entity "register32_r_en" for hierarchy "Register_file:fifo_reg_file|register32_8:sub_register32_8|register32_r_en:u0" File: C:/intelFPGA_lite/18.1/Assignment8/register32_8.v Line: 14
+Info (12128): Elaborating entity "write_operation" for hierarchy "Register_file:fifo_reg_file|write_operation:sub_write_operation" File: C:/intelFPGA_lite/18.1/Assignment8/Register_file.v Line: 18
+Info (12128): Elaborating entity "_3_to_8_decoder" for hierarchy "Register_file:fifo_reg_file|write_operation:sub_write_operation|_3_to_8_decoder:u0_decoder" File: C:/intelFPGA_lite/18.1/Assignment8/write_operation.v Line: 13
+Info (12128): Elaborating entity "_and2" for hierarchy "Register_file:fifo_reg_file|write_operation:sub_write_operation|_and2:u0" File: C:/intelFPGA_lite/18.1/Assignment8/write_operation.v Line: 15
+Info (12128): Elaborating entity "read_operation" for hierarchy "Register_file:fifo_reg_file|read_operation:sub_read_operation" File: C:/intelFPGA_lite/18.1/Assignment8/Register_file.v Line: 20
+Info (12128): Elaborating entity "_8_to_1_MUX" for hierarchy "Register_file:fifo_reg_file|read_operation:sub_read_operation|_8_to_1_MUX:u0" File: C:/intelFPGA_lite/18.1/Assignment8/read_operation.v Line: 11
+Info (12128): Elaborating entity "mx2_32bits" for hierarchy "mx2_32bits:fifo_mx2_32" File: C:/intelFPGA_lite/18.1/Assignment8/fifo.v Line: 51
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Assignment8/output_files/fifo.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 481 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 403 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Nov 05 19:15:29 2023
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/18.1/Assignment8/output_files/fifo.map.smsg.
+
+

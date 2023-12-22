@@ -1,0 +1,29 @@
+`timescale 1ns/100ps
+module tb_register32; // module name tb_register32
+	
+	reg clk; // 1bit reg clk
+	reg [31:0] tb_d; // 32bit reg tb_d
+	wire [31:0] tb_q; // 32bit wire tb_q
+	
+	_register32 test_register32(.clk(clk), .d(tb_d), .q(tb_q)); // tb_register32 is testbench for module _register32
+	
+	always // set clock period
+		begin // begin block
+			clk = 1; #5; // clk change 0 to 1 #5
+			clk = 0; #5; // clk change 1 to 0 #5
+		end // end block
+	
+	initial // initial block(start execution)
+		begin // begin block
+		tb_d = 32'h00000000; #4; // save hexadecimal value to tb_d
+		tb_d = 32'hFFFF0000; #4; // save hexadecimal value to tb_d
+		tb_d = 32'h0F0F0F0F; #4; // save hexadecimal value to tb_d
+		tb_d = 32'hF0F0F0F0; #4; // save hexadecimal value to tb_d
+		tb_d = 32'h11111111; #4; // save hexadecimal value to tb_d
+		tb_d = 32'h01010101; #4; // save hexadecimal value to tb_d
+		tb_d = 32'h10101010; #4; // save hexadecimal value to tb_d
+		tb_d = 32'hFFFFFFFF; #4; // save hexadecimal value to tb_d
+		#3; $stop; // after 3ns stop
+		end // end block
+		
+endmodule // end of module

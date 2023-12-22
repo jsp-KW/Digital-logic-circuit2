@@ -1,0 +1,29 @@
+`timescale 1ns/100ps 
+module tb_register8_r; // test bench module name is  tb_register8_r
+	reg clk, reset_n; //1bit input
+	reg [7:0] d;// 8bit input
+	wire [7:0] q; // 8bit output
+	
+	
+	_register8_r test (clk,reset_n,d,q);
+	
+	always begin
+		#5  clk = ~clk;
+	end
+	
+	initial begin
+		clk =1;  reset_n =0; d=8b'00001111; #10;
+		reset_n =1; #10;
+		
+		d=8b'00001111; #10;
+		reset_n =0;
+		d=8b'00011111; #10;
+	
+		
+		
+		
+	end
+	
+	
+endmodule
+

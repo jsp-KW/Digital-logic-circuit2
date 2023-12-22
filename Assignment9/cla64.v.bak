@@ -1,0 +1,16 @@
+module cla64 (a,b,ci,co,s);
+
+	input [63:0] a,b;// 32bit input signal a,b
+	input ci;// 1bit output signal
+	output co;// 1bit output signal
+	output [63:0] s;// 64bit output signal
+	wire c;//1 bit internal carry wire signal
+	
+	cla32 u0_cla32(.a(a[31:0]),.b(b([31:0])), .ci(ci), .co(c), .s(s[31:0]));
+	cla32 u0_cla32(.a(a[63:32]),.b(b([63:32])), .ci(c), .co(co), .s(([63:32]));
+	
+endmodule
+
+	
+	
+	

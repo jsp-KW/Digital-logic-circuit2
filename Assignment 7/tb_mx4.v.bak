@@ -1,0 +1,27 @@
+`timescale 1ns/100ps 
+module tb_mx4; // module name tb_mx4
+	reg d0, d1, d2, d3;
+  reg [1:0] s;
+  wire y;
+
+  //mx4를 인스턴스화
+  mx4 test (y,d0,d1,d2,d3,s);
+
+	
+   always begin
+		#5 tb_clk=~tb_clk; // clock setting
+	end
+	
+	initial 
+	begin // verificate
+		
+		d0 =0 ; d1 = 1; d2 =2; d3 =3; s=2'b00; #10;// d0 selected
+		
+		d0 =0 ; d1 = 1; d2 =2; d3 =3; s=2'b01; #10;// d1 selected
+		
+		d0 =0 ; d1 = 1; d2 =2; d3 =3; s=2'b10; #10;// d2 selected
+		
+		d0 =0 ; d1 = 1; d2 =2; d3 =3; s=2'b11; #10;// d3 selected
+		$stop; // stop
+	end 
+endmodule 

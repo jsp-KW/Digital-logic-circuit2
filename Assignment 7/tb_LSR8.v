@@ -1,0 +1,28 @@
+`timescale 1ns/100ps 
+module tb_LSR8; // module name tb_LSR8
+	reg tb_clk; // 1bit reg
+	reg [1:0] tb_shamt; // 2bit reg 
+	reg [7:0] tb_d_in; // 8bit reg 
+	wire [7:0] tb_d_out; // 8bit wire
+
+	LSR8 test(tb_d_in, tb_shamt, tb_d_out); // testbench for LSR8
+	
+   always begin
+		#5 tb_clk=~tb_clk; // clock setting
+	end
+	
+	initial 
+	begin // verificate
+		tb_clk=1; tb_shamt=2'b00; tb_d_in=8'b01010101; #10; // init first 0
+		tb_shamt=2'b01; #10; // LSR >> 1bit
+		tb_shamt=2'b10; #10; // LSR >> 2bit
+		tb_shamt=2'b11; #10; // LSR >> 3bit
+		
+		tb_d_in = 8'b00001111; 	tb_shamt =2'b00; #10;
+	
+		tb_shamt =2'b01; #10;// >>1 bit
+		tb_shamt =2'b10; #10;// >>2 bit
+		tb_shamt =2'b11; #10;// >>3 bit
+		$stop; // stop
+	end 
+endmodule 

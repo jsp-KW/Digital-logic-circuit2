@@ -1,0 +1,101 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/Assignment5/simulation/modelsim
+v_dff_r_async
+Z1 !s110 1697402445
+!i10b 1
+!s100 6DFe4N?KOg=24>gj>m4UF3
+I^Y4;2OP^hzXGD9lj3eEW>2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1697402059
+8C:/intelFPGA_lite/18.1/Assignment5/_dff_r_async.v
+FC:/intelFPGA_lite/18.1/Assignment5/_dff_r_async.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1697402445.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment5/_dff_r_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment5|C:/intelFPGA_lite/18.1/Assignment5/_dff_r_async.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment5
+Z7 tCvgOpt 0
+n@_dff_r_async
+v_dff_r_sync
+R1
+!i10b 1
+!s100 kLk:Kcj1JEc@7foN[34c;3
+I>UlgWhUCk09ZeM_7YDT]L1
+R2
+R0
+w1697401981
+8C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync.v
+FC:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment5|C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync.v|
+!i113 1
+R5
+R6
+R7
+n@_dff_r_sync
+v_dff_r_sync_async
+Z8 !s110 1697402446
+!i10b 1
+!s100 45mJXnaU]]zg4JF>[:8[52
+I81o:oRM27Z459:7R=DoN=0
+R2
+R0
+w1697401914
+8C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync_async.v
+FC:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync_async.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment5|C:/intelFPGA_lite/18.1/Assignment5/_dff_r_sync_async.v|
+!i113 1
+R5
+R6
+R7
+n@_dff_r_sync_async
+vtb_dff_r_sync_async
+R8
+!i10b 1
+!s100 M<KDSihSAndk>>S5fHSoY3
+IHH7_XTMfJQaU;mf_7K_EG0
+R2
+R0
+w1697402210
+8C:/intelFPGA_lite/18.1/Assignment5/tb_dff_r_sync_async.v
+FC:/intelFPGA_lite/18.1/Assignment5/tb_dff_r_sync_async.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1697402446.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment5/tb_dff_r_sync_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment5|C:/intelFPGA_lite/18.1/Assignment5/tb_dff_r_sync_async.v|
+!i113 1
+R5
+R6
+R7

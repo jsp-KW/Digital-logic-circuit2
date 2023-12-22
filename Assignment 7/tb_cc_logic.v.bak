@@ -1,0 +1,23 @@
+`timescale 1ns/100ps // time unit is 1ns, time precision is 100ps
+module tb_cc_logic; // module name tb_cc_logic
+	reg tb_clk; // 1bit reg tb_clk
+	reg [2:0] tb_op; // 3bit reg tb_op
+	reg [1:0] tb_shamt; // 2bit reg tb_shamt
+	reg [7:0] tb_d_in; // 8bit reg tb_d_in
+	reg [7:0] tb_d_out; // 8bit reg tb_d_out
+	wire [7:0] tb_d_next; // 8bit wire tb_d_next
+
+	cc_logic test_cc_logic(.op(tb_op), .shamt(tb_shamt), .d_in(tb_d_in), .d_out(tb_d_out), .d_next(tb_d_next)); // testbench for cc_logic
+	
+   always #5 tb_clk=~tb_clk; // clock period is 10ns
+
+	initial // execute only once
+	begin // begin block(start)
+		tb_clk=1; // initial setting
+		tb_d_in=8'b0110110;
+		tb_op=3'b010; tb_d_out=3'b01010101; tb_shamt=2'b01; #10; // LSL
+		tb_op=3'b011; tb_d_out=3'b01010101; tb_shamt=2'b10; #10; // LSR
+		tb_op=3'b100; tb_d_out=3'b01010101; tb_shamt=2'b11; #10; // ASR
+		$stop; // stop
+	end // end block(end)
+endmodule // end of module

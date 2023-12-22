@@ -1,0 +1,61 @@
+`timescale 1ns/1ps
+
+module tb_Register_file;
+  reg tb_clk;
+  reg tb_reset_n;
+  reg tb_we;
+  reg [2:0] tb_wAddr;
+  reg [2:0] tb_rAddr;
+  reg [31:0] tb_wData;
+  wire [31:0] tb_rData;
+
+  Register_file testbench (
+    .clk(tb_clk),
+    .reset_n(tb_reset_n),
+    .we(tb_we),
+    .wAddr(tb_wAddr),
+    .rAddr(tb_rAddr),
+    .wData(tb_wData),
+    .rData(tb_rData)
+  );
+
+  // Clock generation
+  always begin
+    #5 tb_clk = ~tb_clk;
+  end
+
+  // Reset sequence
+  initial begin
+    tb_clk = 0;
+    tb_reset_n = 0;
+    tb_we = 0;
+    tb_wAddr = 0;
+    tb_rAddr = 0;
+    tb_wData = 0;
+
+    // Apply reset
+    tb_reset_n = 0;
+    #10 tb_reset_n = 1;
+
+    // Test cases
+    // Write some data
+    tb_we = 1;
+    tb_wAddr = 0;
+    tb_wData = 32'h12345678;
+    #10;
+
+    tb_we = 1;
+    tb_wAddr = 1;
+    tb_wData = 32'hABCDEF01;
+    #10;
+
+    // Read the written data
+    tb_we = 0;
+    tb_rAddr = 0;
+    #10;
+
+
+    // End simulation
+    $finish;
+  end
+endmodule

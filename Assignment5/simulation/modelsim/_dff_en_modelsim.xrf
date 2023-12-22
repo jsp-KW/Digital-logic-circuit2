@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/mx2.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/gates.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dlatch.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dff.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dff_en.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/tb_dff_en.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/db/_dff_en.cbx.xml
+design_name = _dff_en
+instance = comp, \q~output , q~output, _dff_en, 1
+instance = comp, \clk~input , clk~input, _dff_en, 1
+instance = comp, \en~input , en~input, _dff_en, 1
+instance = comp, \d~input , d~input, _dff_en, 1
+instance = comp, \u0_mx|nd22|y~0 , u0_mx|nd22|y~0, _dff_en, 1
+instance = comp, \u1_dff_en|u1_dlatch|q , u1_dff_en|u1_dlatch|q, _dff_en, 1
+instance = comp, \u1_dff_en|u2_dlatch|q , u1_dff_en|u2_dlatch|q, _dff_en, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _dff_en, 1

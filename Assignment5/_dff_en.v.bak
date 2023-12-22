@@ -1,0 +1,5 @@
+module _dff_en(clk, en, d,q );
+	input clk, en, d
+	wire w_d;
+	
+	

@@ -1,0 +1,26 @@
+|blocking_and_nonblocking
+clk => clk.IN2
+a => a.IN2
+b << blocking:u0_blocking.b
+c << blocking:u0_blocking.c
+d << nonblocking:u1_nonblocking.b
+e << nonblocking:u1_nonblocking.c
+
+
+|blocking_and_nonblocking|blocking:u0_blocking
+clk => c~reg0.CLK
+clk => b~reg0.CLK
+a => c~reg0.DATAIN
+a => b~reg0.DATAIN
+b <= b~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c <= c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blocking_and_nonblocking|nonblocking:u1_nonblocking
+clk => c~reg0.CLK
+clk => b~reg0.CLK
+a => b~reg0.DATAIN
+b <= b~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c <= c~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

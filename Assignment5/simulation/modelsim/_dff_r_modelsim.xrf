@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/gates.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dlatch.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dff.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/_dff_r.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/tb_dff_r.v
+source_file = 1, C:/intelFPGA_lite/18.1/Assignment5/db/_dff_r.cbx.xml
+design_name = _dff_r
+instance = comp, \q~output , q~output, _dff_r, 1
+instance = comp, \clk~input , clk~input, _dff_r, 1
+instance = comp, \reset_n~input , reset_n~input, _dff_r, 1
+instance = comp, \d~input , d~input, _dff_r, 1
+instance = comp, \u0and2|y , u0and2|y, _dff_r, 1
+instance = comp, \u1dff|u1_dlatch|q , u1dff|u1_dlatch|q, _dff_r, 1
+instance = comp, \u1dff|u2_dlatch|q , u1dff|u2_dlatch|q, _dff_r, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _dff_r, 1

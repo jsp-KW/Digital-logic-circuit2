@@ -1,0 +1,4 @@
+
+//Top module
+
+module fifo (clk, reset_n, rd_en,wr_en, d_in, d_out, full, empty, wr_ack, wr_err, rd_ack, rd_err, data_count);

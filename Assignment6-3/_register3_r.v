@@ -1,0 +1,11 @@
+module _register3_r(clk, reset_n, D2,D1,D0,Q2,Q1,Q0);// module name is _register3_r
+ 
+	input clk, reset_n, D2,D1,D0; // input signal 1bit clk, reset_n D2,D1,D0
+	output Q2,Q1,Q0;// output signal 1bit Q2 Q1 Q0
+	
+	// module instance , use _dff_r_async.. name is u0,u1,u2
+	_dff_r_async u0(.clk(clk), .reset_n(reset_n), .d(D0), .q(Q0));
+	_dff_r_async u1(.clk(clk), .reset_n(reset_n), .d(D1), .q(Q1));
+	_dff_r_async u2(.clk(clk), .reset_n(reset_n), .d(D2), .q(Q2));
+
+endmodule // endmodule

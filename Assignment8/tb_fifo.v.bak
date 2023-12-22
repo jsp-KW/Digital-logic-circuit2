@@ -1,0 +1,41 @@
+`timescale 1ns/100ps
+
+//first in first out testbench module
+module tb_fifo;
+   
+   reg clk,reset_n,rd_en,wr_en;
+   reg [31:0] d_in;
+   wire [31:0] d_out;
+   wire full,empty,wr_ack,wr_err,rd_ack,rd_err;
+   wire [3:0] data_count;
+   
+   //generate clock
+   always begin
+      #5; clk=~clk;
+   end
+   
+   fifo U0_fifo(clk,reset_n,rd_en,wr_en,d_in,d_out,full,empty,wr_ack,wr_err,rd_ack,rd_err,data_count);      //test module
+   
+   initial begin
+      clk=0; reset_n=0; rd_en=0; wr_en=0; d_in=32'h0;
+		#10; tb_din = 32'h0001;
+		#10; tb_din = 32'h0002;
+		#10; tb_din = 32'h0003;
+		#10; tb_din = 32'h0004;
+		#10; tb_din = 32'h0005;
+		#10; tb_din = 32'h0006;
+		#10; tb_din = 32'h0007;
+		#10; tb_din = 32'h0008;
+		#10; tb_din = 32'h0009;
+		
+		wr_en =0 ; rd_en =1;
+		
+		#10;
+		#10;
+		
+		
+		
+		
+		end 
+endmodule
+	

@@ -1,0 +1,19 @@
+module o_logic (Q1,Q0, La1, La0, Lb1, Lb0);
+	input Q1, Q0;
+	output La1,La0, Lb1, Lb0;
+	
+	// instance module..
+	// 2 input and + inverter, inverter, 2 input and gate
+	
+	wire w0;
+	
+	assign La1 = Q1;
+	
+	_inv inv_la0(.a(Q1), .y(w0));
+	_and2 and_la0(.a(w0), .b(Q0), .y(La0));
+	
+	_inv inv_lb1(.a(Q1), .y(Lb1));
+	
+	_and2 and_lb0(.a(Q1), .b(Q0), .y(Lb0));
+	
+endmodule

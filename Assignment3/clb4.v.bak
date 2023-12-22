@@ -1,0 +1,5 @@
+module clb4 (a,b,ci,c1,c2,c3,co);
+	input [3:0] a,b; //4bit input a,b
+	input ci;// 1bit input ci
+	output c1,c2,c3,co;// 1bit output c1 c2 c3 co
+	wire [3:0] g,p;

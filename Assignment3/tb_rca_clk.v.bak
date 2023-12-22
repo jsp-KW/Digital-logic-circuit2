@@ -1,0 +1,25 @@
+`timescale  1ns/100ps
+
+module tb_rca_clk;
+	reg clk;
+	reg [31:0] tb_a, tb_b;
+	reg tb_ci;
+	wire [31:0] tb_s_cla;
+	wire tb_co_cla;
+	
+	parameter STEP = 10;
+	
+	rca_clk u0_rca_clk(.clk(clk), .a(tb_a), .b(tb_b), .ci(tb_ci), .s(tb_s_cla), .co(tb_co_cla));
+	
+	always #(STEP/2) clk = ~clk;
+	
+	initial begin
+			clk = 1'b1;	
+		tb_a=32'h00000000; tb_b=32'h00000001; tb_ci=1'b0; #(STEP); // 1st testcase(verification positive edge work)
+		tb_a=32'h00000001; tb_b=32'h00000001; tb_ci=1'b0; #(STEP); // 2nd testcase(verification carry)
+		tb_a=32'h01010101; tb_b=32'h01010101; tb_ci=1'b1; #(STEP); // 3rd testcase(verification continuous carry out)
+		tb_a=32'h11111111; tb_b=32'h00000001; tb_ci=1'b0; #(STEP); // 4th testcase(verification carry out omission)
+
+	end
+		
+endmodule

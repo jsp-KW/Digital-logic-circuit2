@@ -1,0 +1,2 @@
+module _tl_cntr_struct (clk, reset_n,Ta,Tb,La,Lb);
+	

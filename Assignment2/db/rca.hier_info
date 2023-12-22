@@ -1,0 +1,449 @@
+|rca4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+ci => ci.IN1
+co <= fa:_fa3.co
+s[0] <= fa:_fa0.s
+s[1] <= fa:_fa1.s
+s[2] <= fa:_fa2.s
+s[3] <= fa:_fa3.s
+
+
+|rca4|fa:_fa0
+a => a.IN1
+b => b.IN1
+ci => ci.IN1
+s <= ha:_ha2.s
+co <= _or2:_or.y
+
+
+|rca4|fa:_fa0|ha:_ha1
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa0|ha:_ha1|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha1|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa0|ha:_ha2|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|ha:_ha2|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa0|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1
+a => a.IN1
+b => b.IN1
+ci => ci.IN1
+s <= ha:_ha2.s
+co <= _or2:_or.y
+
+
+|rca4|fa:_fa1|ha:_ha1
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa1|ha:_ha1|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha1|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa1|ha:_ha2|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|ha:_ha2|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa1|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2
+a => a.IN1
+b => b.IN1
+ci => ci.IN1
+s <= ha:_ha2.s
+co <= _or2:_or.y
+
+
+|rca4|fa:_fa2|ha:_ha1
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa2|ha:_ha1|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha1|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa2|ha:_ha2|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|ha:_ha2|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa2|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3
+a => a.IN1
+b => b.IN1
+ci => ci.IN1
+s <= ha:_ha2.s
+co <= _or2:_or.y
+
+
+|rca4|fa:_fa3|ha:_ha1
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa3|ha:_ha1|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha1|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2
+a => a.IN2
+b => b.IN2
+s <= _xor2:S.y
+co <= _and2:CO.y
+
+
+|rca4|fa:_fa3|ha:_ha2|_and2:CO
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|ha:_ha2|_xor2:S|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rca4|fa:_fa3|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

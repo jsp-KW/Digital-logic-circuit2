@@ -1,0 +1,8 @@
+`timescale 1ns/100ps
+
+module tb_dff;
+	reg tb_clk;
+	reg tb_d;
+	
+	wire tb_q, tb_qbar;
+	

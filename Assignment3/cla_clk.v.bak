@@ -1,0 +1,12 @@
+module cla_clk (a,b,ci,clk,co,s);
+	input clk;
+	input [31:0] a,b;
+	input ci;
+	output [31:0] s;
+	output [31:0] co;
+	
+	reg [31:0] reg_a, reg_b;
+	reg reg_ci;
+	reg [31:0] reg_s;
+	reg reg_co;
+	

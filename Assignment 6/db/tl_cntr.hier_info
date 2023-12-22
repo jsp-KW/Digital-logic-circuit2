@@ -1,0 +1,83 @@
+|ns_logic
+Ta => Ta.IN1
+Tb => Tb.IN1
+Q1 => Q1.IN3
+Q0 => Q0.IN2
+D1 << _xor2:u0.y
+D0 << _or2:u3.y
+
+
+|ns_logic|_inv:fir_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_inv:sec_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_inv:thr_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_inv:four_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_xor2:u0
+a => a.IN2
+b => b.IN2
+y <= _or2:_or.y
+
+
+|ns_logic|_xor2:u0|_inv:_inv1
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_xor2:u0|_inv:_inv2
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_xor2:u0|_and2:_and1
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_xor2:u0|_and2:_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_xor2:u0|_or2:_or
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_and3:u1
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_and3:u2
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ns_logic|_or2:u3
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

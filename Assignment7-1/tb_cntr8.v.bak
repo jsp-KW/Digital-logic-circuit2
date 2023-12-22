@@ -1,0 +1,19 @@
+`timescale 1ns/100ps // time unit is 1ns, precision is 100ps
+module tb_cntr8; // module name tb_cntrt8
+	reg tb_clk, tb_reset_n, tb_inc, tb_load; // 1bit reg tb_clk, tb_reset_n, tb_inc, tb_load
+	reg [7:0] tb_d_in; // 8bit reg tb_d_in
+	wire [7:0] tb_d_out; // 8bit wire tb_d_out
+	wire [2:0] tb_o_state; // 3bit wire tb_o_state
+	
+	cntr8	test_cntr8(.clk(tb_clk), .reset_n(tb_reset_n), .inc(tb_inc), .load(tb_load), .d_in(tb_d_in), .d_out(tb_d_out), .o_state(tb_o_state)); // testbench for cntr8 module
+	
+	always #5 tb_clk=~tb_clk; // change clock signal. 1 period is 10ns
+	initial // execute only once
+		begin // begin block(start)
+		tb_clk=0; tb_reset_n=0; tb_inc=0; tb_load=0; tb_d_in=8'h01; #10; // initial set
+		tb_reset_n=1; tb_load=0; tb_inc=1; #40; // INC -> INC2 -> INC -> INC2
+		tb_inc=0; #40; // DEC -> DEC2 -> DEC -> DEC2
+		tb_load=1; #10; // LOAD
+		$stop; // stop
+		end // end block(end)
+endmodule // end of module

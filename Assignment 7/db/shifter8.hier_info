@@ -1,0 +1,2622 @@
+|shifter8
+clk => clk.IN1
+reset_n => reset_n.IN1
+op[0] => op[0].IN1
+op[1] => op[1].IN1
+op[2] => op[2].IN1
+shamt[0] => shamt[0].IN1
+shamt[1] => shamt[1].IN1
+d_in[0] => d_in[0].IN1
+d_in[1] => d_in[1].IN1
+d_in[2] => d_in[2].IN1
+d_in[3] => d_in[3].IN1
+d_in[4] => d_in[4].IN1
+d_in[5] => d_in[5].IN1
+d_in[6] => d_in[6].IN1
+d_in[7] => d_in[7].IN1
+d_out[0] <= d_out[0].DB_MAX_OUTPUT_PORT_TYPE
+d_out[1] <= d_out[1].DB_MAX_OUTPUT_PORT_TYPE
+d_out[2] <= d_out[2].DB_MAX_OUTPUT_PORT_TYPE
+d_out[3] <= d_out[3].DB_MAX_OUTPUT_PORT_TYPE
+d_out[4] <= d_out[4].DB_MAX_OUTPUT_PORT_TYPE
+d_out[5] <= d_out[5].DB_MAX_OUTPUT_PORT_TYPE
+d_out[6] <= d_out[6].DB_MAX_OUTPUT_PORT_TYPE
+d_out[7] <= d_out[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0
+op[0] => Mux0.IN6
+op[0] => Mux1.IN6
+op[0] => Mux2.IN6
+op[0] => Mux3.IN6
+op[0] => Mux4.IN6
+op[0] => Mux5.IN6
+op[0] => Mux6.IN6
+op[0] => Mux7.IN6
+op[0] => Mux8.IN10
+op[1] => Mux0.IN5
+op[1] => Mux1.IN5
+op[1] => Mux2.IN5
+op[1] => Mux3.IN5
+op[1] => Mux4.IN5
+op[1] => Mux5.IN5
+op[1] => Mux6.IN5
+op[1] => Mux7.IN5
+op[1] => Mux8.IN9
+op[2] => Mux0.IN4
+op[2] => Mux1.IN4
+op[2] => Mux2.IN4
+op[2] => Mux3.IN4
+op[2] => Mux4.IN4
+op[2] => Mux5.IN4
+op[2] => Mux6.IN4
+op[2] => Mux7.IN4
+op[2] => Mux8.IN8
+shamt[0] => shamt[0].IN3
+shamt[1] => shamt[1].IN3
+d_in[0] => Mux0.IN7
+d_in[1] => Mux1.IN7
+d_in[2] => Mux2.IN7
+d_in[3] => Mux3.IN7
+d_in[4] => Mux4.IN7
+d_in[5] => Mux5.IN7
+d_in[6] => Mux6.IN7
+d_in[7] => Mux7.IN7
+d_out[0] => d_out[0].IN3
+d_out[1] => d_out[1].IN3
+d_out[2] => d_out[2].IN3
+d_out[3] => d_out[3].IN3
+d_out[4] => d_out[4].IN3
+d_out[5] => d_out[5].IN3
+d_out[6] => d_out[6].IN3
+d_out[7] => d_out[7].IN3
+d_next[0] <= d_next[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[1] <= d_next[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[2] <= d_next[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[3] <= d_next[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[4] <= d_next[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[5] <= d_next[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[6] <= d_next[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+d_next[7] <= d_next[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8
+d_in[0] => d_in[0].IN4
+d_in[1] => d_in[1].IN4
+d_in[2] => d_in[2].IN4
+d_in[3] => d_in[3].IN4
+d_in[4] => d_in[4].IN4
+d_in[5] => d_in[5].IN3
+d_in[6] => d_in[6].IN2
+d_in[7] => d_in[7].IN1
+shamt[0] => shamt[0].IN8
+shamt[1] => shamt[1].IN8
+d_out[0] <= mx4:u0.y
+d_out[1] <= mx4:u1.y
+d_out[2] <= mx4:u2.y
+d_out[3] <= mx4:u3.y
+d_out[4] <= mx4:u4.y
+d_out[5] <= mx4:u5.y
+d_out[6] <= mx4:u6.y
+d_out[7] <= mx4:u7.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u7|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u6|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u5|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u4|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u3|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u2|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u1|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSL8:lsl8|mx4:u0|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8
+d_in[0] => d_in[0].IN1
+d_in[1] => d_in[1].IN2
+d_in[2] => d_in[2].IN3
+d_in[3] => d_in[3].IN4
+d_in[4] => d_in[4].IN4
+d_in[5] => d_in[5].IN4
+d_in[6] => d_in[6].IN4
+d_in[7] => d_in[7].IN4
+shamt[0] => shamt[0].IN8
+shamt[1] => shamt[1].IN8
+d_out[0] <= mx4:u0.y
+d_out[1] <= mx4:u1.y
+d_out[2] <= mx4:u2.y
+d_out[3] <= mx4:u3.y
+d_out[4] <= mx4:u4.y
+d_out[5] <= mx4:u5.y
+d_out[6] <= mx4:u6.y
+d_out[7] <= mx4:u7.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u7|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u6|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u5|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u4|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u3|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u2|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u1|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|LSR8:lsr8|mx4:u0|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8
+d_in[0] => d_in[0].IN1
+d_in[1] => d_in[1].IN2
+d_in[2] => d_in[2].IN3
+d_in[3] => d_in[3].IN4
+d_in[4] => d_in[4].IN4
+d_in[5] => d_in[5].IN4
+d_in[6] => d_in[6].IN4
+d_in[7] => d_in[7].IN10
+shamt[0] => shamt[0].IN8
+shamt[1] => shamt[1].IN8
+d_out[0] <= mx4:asr_u0.y
+d_out[1] <= mx4:asr_u1.y
+d_out[2] <= mx4:asr_u2.y
+d_out[3] <= mx4:asr_u3.y
+d_out[4] <= mx4:asr_u4.y
+d_out[5] <= mx4:asr_u5.y
+d_out[6] <= mx4:asr_u6.y
+d_out[7] <= mx4:asr_u7.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u7|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u6|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u5|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u4|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u3|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u2|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u1|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0
+y <= mx2:u2.y
+d0 => d0.IN1
+d1 => d1.IN1
+d2 => d2.IN1
+d3 => d3.IN1
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u0
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u0|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u0|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u0|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u0|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u1
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u1|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u1|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u1|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u1|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:nd22.y
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u2|_inv:iv0
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u2|_nand2:nd20
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u2|_nand2:nd21
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|cc_logic:u0|ASR8:asr8|mx4:asr_u0|mx2:u2|_nand2:nd22
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8
+clk => clk.IN8
+reset_n => reset_n.IN8
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+d[4] => d[4].IN1
+d[5] => d[5].IN1
+d[6] => d[6].IN1
+d[7] => d[7].IN1
+q[0] <= _dff_r:u0.port3
+q[1] <= _dff_r:u1.port3
+q[2] <= _dff_r:u2.port3
+q[3] <= _dff_r:u3.port3
+q[4] <= _dff_r:u4.port3
+q[5] <= _dff_r:u5.port3
+q[6] <= _dff_r:u6.port3
+q[7] <= _dff_r:u7.port3
+
+
+|shifter8|_register8_r:r8|_dff_r:u0
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u1
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u2
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u3
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u4
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u5
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u6
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shifter8|_register8_r:r8|_dff_r:u7
+clk => q~reg0.CLK
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

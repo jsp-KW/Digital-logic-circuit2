@@ -1,0 +1,45 @@
+`timescale 1ns/100ps
+
+module tb_dff_r_syn_async;
+
+    reg clk;       // Clock signal
+    reg reset_n;   // Reset signal (active low)
+    reg d;         // Input data signal
+    wire q_sync;   // Output of the synchronous D flip-flop
+    wire q_async;  // Output of the asynchronous D flip-flop
+
+    // Instantiate the synchronous D flip-flop
+    _dff_r_sync U0_dff_r_sync (
+        .clk(clk),
+        .reset_n(reset_n),
+        .d(d),
+        .q(q_sync)
+    );
+
+    // Instantiate the asynchronous D flip-flop
+    _dff_r_async U1_dff_r_async (
+        .clk(clk),
+        .reset_n(reset_n),
+        .d(d),
+        .q(q_async)
+    );
+
+    always #5 clk = ~clk; // Toggle the clock signal every 5 time units
+
+    initial begin
+        clk = 0;
+        reset_n = 1; // Release reset (active low)
+        d = 1'b0;    // Set initial input value
+
+        // Apply different test cases
+        #10 d = 1'b1;
+        #10 d = 1'b0;
+        #10 reset_n = 0; // Apply asynchronous reset (active low)
+        #10 reset_n = 1; // Release the asynchronous reset
+        #10 d = 1'b1;
+        #10 d = 1'b0;
+
+        // Stop the simulation
+        $stop;
+    end
+endmodule

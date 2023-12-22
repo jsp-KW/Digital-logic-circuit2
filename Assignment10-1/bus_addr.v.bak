@@ -1,0 +1,26 @@
+module bus_addr(addr, s0_sel, s1_sel);  
+
+//M0_address[7:0] or M1_address [7:0], select signal is input
+//output is S0_sel~S1_sel
+	input [7:0] addr;
+	output reg s0_sel, s1_sel;
+	
+	upper_3bit = addr[7:5];
+	
+	always@ (addr) begin
+	
+		if (upper_3bit == 3'b000) 
+				
+				{s0_sel, s1_sel} = 2'b10;
+			
+		else if (upper_3bit == 3'b001)
+				
+				{s0_sel, s1_sel} = 2'b01;
+			
+		else {s0_sel, s1_sel} = 2'b00;
+	end
+
+		
+endmodule
+
+	

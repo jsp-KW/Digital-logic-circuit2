@@ -1,0 +1,30 @@
+`timescale 1ns/100ps
+
+module tb_ns_logic;
+
+	reg tb_op_start, tb_op_clear,tb_clk;
+	reg[1:0] tb_state;
+	reg [6:0] tb_count;
+	
+	wire [1:0] tb_next_state;
+	
+	
+	//state encoding
+	parameter IDLE = 2'b00;
+	parameter EXEC = 2'b01;
+	parameter DONE = 2'b10;
+	
+	ns_logic test_ns_logic (.op_start (tb_op_start), .op_clear(tb_op_clear), .state(tb_state), .count(tb_count) , .next_state(tb_next_state));
+	
+	always #5 tb_clk = ~tb_clk;
+	
+	initial begin
+		tb_op_start = 0; tb_op_clear = 0; tb_state = IDLE; tb_count = 0;
+		#5; tb_op_start =1;
+		#5; tb_op_start =0; tb_op_clear =1; 
+		#5; tb_state = EXEC; tb_op_start =0; tb_op_clear = 0; count =50;
+		#5; count = 63;
+		
+	
+	end
+	

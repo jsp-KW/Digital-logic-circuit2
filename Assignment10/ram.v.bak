@@ -1,0 +1,32 @@
+module ram(clk, cen, wen, addr, din, dout);
+	input clk,cen,wen;
+	input [4:0] addr;
+	input [31:0] din;
+	output reg [31:0] dout;
+	
+	reg [31:0] mem [0:31];
+	integer i;
+	
+	//init with for
+	
+	
+	initial begin
+		for ( i=0; i<32; i= i+1) begin
+			mem[i] = 32'b0;
+		end
+	end
+	
+	always@ (posedge clk) begin
+		
+		//read/write perfomance
+		if (cen == 1'b1 && wen ==1'b1) begin //write
+			mem[addr] <= din; dout <= 0;
+		end
+		else if (cen == 1'b1 && wen =1'b0)  // read
+			dout <= mem[addr];
+		else if (cen == 1'b0) 
+			dout <= 32'b0;
+	end
+
+	
+endmodule

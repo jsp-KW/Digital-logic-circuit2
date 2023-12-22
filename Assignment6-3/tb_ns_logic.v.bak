@@ -1,0 +1,44 @@
+`timescale 1ns/100ps
+
+//next state logic
+module tb_ns_logic; // testbench module name is tb_ns_logic;
+   
+   reg Ta,Tb,Tal,Tbl,Q2,Q1,Q0;      //define 1bit reg
+   wire D2,D1,D0;                     //1 bit size wire
+   
+   ns_logic U0_ns_logic(Ta,Tb,Tal,Tbl,Q2,Q1,Q0,D2,D1,D0);      //test module
+   
+   
+   initial begin
+      //when Q2 Q1 Q0 is 000
+      Ta=0; Tb=0; Tal=0; Tbl=0; Q2=0; Q1=0; Q0=0;
+      #10; Q2=0; Q1=0; Q0=0; Ta=1;
+      
+      //when Q2 Q1 Q0 is 001
+      #10; Q2=0; Q1=0; Q0=1; Tal=1;
+      
+      //when Q2 Q1 Q0 is 010
+      #10; Q2=0; Q1=1; Q0=0; Ta=0; Tal=0;
+      #10; Q2=0; Q1=1; Q0=0;         Tal=1;
+      
+      //when Q2 Q1 Q0 is 011
+      #10; Q2=0; Q1=1; Q0=1; Tb=1;
+      
+      //when Q2 Q1 Q0 is 100
+      #10; Q2=1; Q1=0; Q0=0; Tal=0; Tb=0;
+      #10; Q2=1; Q1=0; Q0=0;          Tb=1;
+      
+      //when Q2 Q1 Q0 is 101
+      #10; Q2=1; Q1=0; Q0=1; Tbl=1;
+      
+      //when Q2 Q1 Q0 is 110
+      #10; Q2=1; Q1=1; Q0=0; Tb=0; Tbl=0;
+      #10; Q2=1; Q1=1; Q0=0;         Tbl=1;
+      
+      //when Q2 Q1 Q0 is 111
+      #10; Q2=1; Q1=1; Q0=1; Ta=1; Tb=1; Tal=1; Tbl=1; Q2=1; Q1=1; Q0=1;
+      #10;
+      
+   end
+   
+endmodule

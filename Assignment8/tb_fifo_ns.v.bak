@@ -1,0 +1,35 @@
+`timescale 1ns/100ps
+
+module tb_fifo_ns;
+   reg wr_en, rd_en; // Input signals
+   reg [2:0] state; // Input signal
+   reg [3:0] data_count; // Input signal
+   wire [2:0] next_state; // Output signal
+
+   // Instantiate the fifo_ns module
+   fifo_ns U0_fifo_ns(
+      .wr_en(wr_en),
+      .rd_en(rd_en),
+      .state(state),
+      .data_count(data_count),
+      .next_state(next_state)
+   );
+
+   initial begin
+      wr_en = 0;
+      rd_en = 0;
+      state = 3'b000; // Initial state
+      data_count = 4'b0000; // Initial data count
+
+      // Simulate changes in inputs and check next_state
+      #10 wr_en = 1; rd_en = 0; data_count = 4'b0001; // Test INIT
+      #10 wr_en = 0; rd_en = 1; data_count = 4'b0000; // Test READ
+      #10 wr_en = 1; rd_en = 0; data_count = 4'b0100; // Test WRITE
+      #10 wr_en = 0; rd_en = 1; data_count = 4'b1000; // Test WR_ERROR
+      #10 wr_en = 1; rd_en = 0; data_count = 4'b0000; // Test RD_ERROR
+      #10 wr_en = 0; rd_en = 1; data_count = 4'b0010; // Test NO_OP
+
+      // Finish simulation
+      $finish;
+   end
+endmodule

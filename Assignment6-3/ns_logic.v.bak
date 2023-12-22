@@ -1,0 +1,33 @@
+module ns_logic (Ta,Tb,Tal,Tbl, Q2,Q1,Q0,D2,D1,D0);
+// module name ns_logic
+
+	input Ta,Tb,Tal,Tbl, Q2,Q1,Q0; //1bit input 
+	output D2,D1,D0; //1bit output
+	
+	// inverter output//
+	
+	wire q2_b,q1_b,q0_b;
+	wire Ta_b,Tb_b,Tal_b, Tbl_b;
+	// wire compute
+	_inv Q2_bar(Q2, q2_b);
+	_inv Q1_bar(Q1, q1_b);
+	_inv Q0_bar(Q0, q0_b);
+	
+	_inv ta_bar(Ta, Ta_b);
+	_inv tb_bar(Tb, Tb_b);
+	_inv tal_bar(Tal, Tal_b);
+	_inv tbl_bar(Tbl, Tbl_b);
+	
+	
+	// D2,  Q2'Q1Q0 + Q2Q1' +Q2Q1Q0'
+	_and3 d2_u0(
+	_and2 d2_u1
+	_and3 d2_u2
+	_or3  d2_u2
+	
+	
+	// D1, Q1 xor Q0
+	
+	
+	// D0, Q2'Q1'Q0'Ta' + Q2'Q1Q0'Tal' +Q2Q1'Q0'Tb' + Q2Q1Q0'Tbl'
+	

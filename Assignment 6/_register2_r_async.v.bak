@@ -1,0 +1,1 @@
+module _register2_r_async (D1, D0,Q1,Q0,CLK,reset);

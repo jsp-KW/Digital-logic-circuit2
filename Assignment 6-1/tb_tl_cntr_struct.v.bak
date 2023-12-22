@@ -1,0 +1,32 @@
+`timescale 1ns/100ps
+
+//Structural Implementation Traffic light controller testbench module
+module tb_tl_cntr_struct;
+
+   reg clk,reset_n,Ta,Tb;      //define 1bit reg
+   wire [1:0]La,Lb;            //2 bit size wire
+   
+   tl_cntr tl_cntr_(clk,reset_n,Ta,Tb,La,Lb);      //test module
+   
+   //make clock
+   always begin
+   #5; clk=~clk;
+   end
+   
+   
+   initial begin
+      //when reset_n is 0
+      clk=0; reset_n=0; Ta=0; Tb=0;
+      
+      //when reset_n is 1
+      #10; reset_n=1;
+      #43; Ta=1;
+      #20; Ta=0;
+      #20; Tb=1;
+      #20; Tb=0;
+      
+      //when reset_n is 0
+      #30; reset_n=0;
+   end
+   
+endmodule

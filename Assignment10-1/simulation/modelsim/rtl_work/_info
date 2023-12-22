@@ -1,0 +1,208 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/Assignment10-1/simulation/modelsim
+vbus
+Z1 !s110 1700910547
+!i10b 1
+!s100 1YRI==5`OjhzLNLGL^L5o3
+I`NTn]SOGiIof6`P@bBll?3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700904817
+8C:/intelFPGA_lite/18.1/Assignment10-1/bus.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/bus.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700910547.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/bus.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment10-1
+Z7 tCvgOpt 0
+vbus_addr
+Z8 !s110 1700910546
+!i10b 1
+!s100 >kCE@[VVf[CGEPCBP=^l]3
+IT`F`C>G`QB62V[2PDaV_[0
+R2
+R0
+w1700840703
+8C:/intelFPGA_lite/18.1/Assignment10-1/bus_addr.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/bus_addr.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1700910546.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/bus_addr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/bus_addr.v|
+!i113 1
+R5
+R6
+R7
+vbus_arbit
+R8
+!i10b 1
+!s100 3V]9i204ECWTEUkPU2E9h0
+ICTDZ[AG6T[EXA9e9oWLMa0
+R2
+R0
+w1700904728
+8C:/intelFPGA_lite/18.1/Assignment10-1/bus_arbit.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/bus_arbit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/bus_arbit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/bus_arbit.v|
+!i113 1
+R5
+R6
+R7
+vdff_2bit_r
+R1
+!i10b 1
+!s100 g^5?SQD5<_3BZe6`3[i4I0
+IA?2H]NzT@dMhQXY?iDIVj0
+R2
+R0
+w1700791437
+8C:/intelFPGA_lite/18.1/Assignment10-1/dff_2bit_r.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/dff_2bit_r.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/dff_2bit_r.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/dff_2bit_r.v|
+!i113 1
+R5
+R6
+R7
+vmux2
+R8
+!i10b 1
+!s100 PKD;n^`EBFjkOKjTR@gEz3
+IJeJe53`RAJdh>zl[`E2Mz2
+R2
+R0
+w1700784573
+8C:/intelFPGA_lite/18.1/Assignment10-1/mux2.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/mux2.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1700910545.000000
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/mux2.v|
+!i113 1
+R5
+R6
+R7
+vmux2_32bit
+R8
+!i10b 1
+!s100 `Vfz01fk:C?SKVL<`SOH42
+IKHnVmNbhTGeo4fBT;5Qz[2
+R2
+R0
+w1700791060
+8C:/intelFPGA_lite/18.1/Assignment10-1/mux2_32bit.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/mux2_32bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/mux2_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/mux2_32bit.v|
+!i113 1
+R5
+R6
+R7
+vmux2_8bit
+R8
+!i10b 1
+!s100 R:^fVH]o]kOe<gVYB[:883
+I3EHakYgE5PS;]1coW0f1D3
+R2
+R0
+w1700784611
+8C:/intelFPGA_lite/18.1/Assignment10-1/mux2_8bit.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/mux2_8bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/mux2_8bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/mux2_8bit.v|
+!i113 1
+R5
+R6
+R7
+vmux3_32bit
+R8
+!i10b 1
+!s100 UeX_ZQHMmn5ZUa8Pb`1fT1
+IGaIfV41@U71IELj8aWkeF3
+R2
+R0
+w1700838272
+8C:/intelFPGA_lite/18.1/Assignment10-1/mux3_32bit.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/mux3_32bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/mux3_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/mux3_32bit.v|
+!i113 1
+R5
+R6
+R7
+vtb_bus
+R1
+!i10b 1
+!s100 ]a:4Lc8KVFQzGI]n^oK0<3
+Ihmcl1X1A`FbD3O`X:IH6J2
+R2
+R0
+w1700910038
+8C:/intelFPGA_lite/18.1/Assignment10-1/tb_bus.v
+FC:/intelFPGA_lite/18.1/Assignment10-1/tb_bus.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/Assignment10-1/tb_bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Assignment10-1|C:/intelFPGA_lite/18.1/Assignment10-1/tb_bus.v|
+!i113 1
+R5
+R6
+R7

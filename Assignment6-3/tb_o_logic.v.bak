@@ -1,0 +1,23 @@
+`timescale 1ns/100ps
+
+//output logic testbench 
+module tb_o_logic; //testbench module name is tb_o_logic
+   
+   reg Q2,Q1,Q0;      //1 bit reg
+   wire [1:0] La,Lb;      //2 bit wire
+   
+   o_logic U0_o_logic(Q2,Q1,Q0,La,Lb);      //test module
+   
+   initial begin
+             Q2=0;Q1=0;Q0=0;
+      #10;   Q2=0;Q1=0;Q0=1;
+      #10;   Q2=0;Q1=1;Q0=0;
+      #10;   Q2=0;Q1=1;Q0=1;
+      #10;   Q2=1;Q1=0;Q0=0;
+      #10;   Q2=1;Q1=0;Q0=1;
+      #10;   Q2=1;Q1=1;Q0=0;
+      #10;   Q2=1;Q1=1;Q0=1;
+      #10;
+   end
+   
+endmodule

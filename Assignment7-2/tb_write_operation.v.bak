@@ -1,0 +1,30 @@
+`timescale 1ns/100ps // declare timescale
+module tb_write_operation; // module name tb_write_operation
+	reg tb_we; // 1bit reg 
+	reg [2:0] tb_Addr; // 3bit reg tb_Addr
+	wire [7:0] tb_wEn; // 8bit wire tb_wEn
+	
+	write_operation tb_write_operation(.we(tb_we), .Addr(tb_Addr), .wEn(tb_wEn)); // testbench for write_operation
+
+	initial // execute only once
+		begin // begin block(start)
+		// set Write enable = 1 and confirm write Address in value each 5ns after
+			tb_we = 1; // active we
+			tb_Addr = 3'b000; #10; 
+			tb_Addr = 3'b001; #10;
+			
+			tb_we = 0; #10; 	
+			tb_Addr = 3'b010; #10; 
+			
+			tb_we = 1;
+			tb_Addr = 3'b010; #10; 
+			
+			tb_Addr = 3'b011; #10; 
+			tb_Addr = 3'b100; #10; 
+			tb_Addr = 3'b101; #10; 
+			tb_Addr = 3'b110; #10; 
+			tb_Addr = 3'b111; #10; 
+		
+			
+		end // end block(end)
+endmodule // end of module

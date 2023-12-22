@@ -1,0 +1,7 @@
+module cla32 (a,b,ci,co,s);
+	input [31:0] a,b,
+	input ci;
+	output co;
+	output [31:0] s;
+	wire [7:0] c;
+endmodule

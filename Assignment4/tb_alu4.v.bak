@@ -1,0 +1,51 @@
+`timescale 1ns/100ps // declare timescale
+
+module tb_alu4; // testbench module name is tb_alu4
+   reg [3:0] tb_a,tb_b, tb_result_expected; // 4bit reg variable tb_a, tb_b
+   reg [2:0] tb_op; // 3bit reg variable tp_op
+   wire [3:0] tb_result; // 4bit wire variable tb_result
+   wire tb_c,tb_n,tb_z,tb_v; // 1bit wire variable tb_c, tb_n, tb_z, tb_v
+   reg clk, reset; // 1bit reg clk, reset
+	reg [31:0] vectornum, errors; // 32bit reg vectornum errors
+	reg [14:0] testvectors[50:0]; // 15bit reg testvectors
+	
+	alu4 test_alu4(.a(tb_a),.b(tb_b),.op(tb_op),.result(tb_result),.c(tb_c),.n(tb_n),.z(tb_z),.v(tb_v)); // use module alu4 and connect variable
+
+	always // repeat
+	begin // begin block(start)
+		clk=1; #5;  // clock period 5
+		clk=0; #5; // clock period 5
+	end // end block(end)
+	
+	initial // intial block
+	begin // begin block(start)
+		$readmemb("alu4.tv", testvectors); // read testvectors file from given path
+		vectornum = 0; // assign vectornum
+		errors=0; // assign error
+		reset=1; #27; // assign reset 1
+		reset=0; // assign reset 0
+	end // end block(end)
+	
+	always @(posedge clk) // posedge = rising edge
+	begin
+		#1; {tb_a[3:0], tb_b[3:0], tb_op[2:0], tb_result_expected[3:0]}=testvectors[vectornum]; // check from testvector
+	end // end block(end)
+	
+	always @(negedge clk) // negedge = falling edge
+	if(~reset)  // reset signal
+	begin // begin block(start)
+		if (tb_result !== tb_result_expected) 
+		begin // begin block(start)
+			$display("Error: inputs = %b", {tb_a, tb_b, tb_op}); // error message for checking testvector
+			$display(" outputs = %b (%b expected)", tb_result, tb_result_expected); // error message for checking testvector
+			errors = errors + 1; // counting errors
+		end // end block(end)
+		vectornum = vectornum+1; // counting vectornum
+	
+		if(testvectors[vectornum]===15'bx)
+		begin // begin block(start)
+			$display("%d tests completed with %d errors", vectornum, errors); // error message for checking testvector
+			$finish;
+		end // end block(end)
+	end // end block(end)
+endmodule // end of module

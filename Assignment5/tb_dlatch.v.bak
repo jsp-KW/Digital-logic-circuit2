@@ -1,0 +1,24 @@
+`timescale 1ns/100ps
+
+module tb_dlatch (clk, d, q, q_bar);
+	reg clk;
+	reg d;
+	wire q, q_bar;
+	
+	_dlatch u0_dlatch (.clk(clk), .d(d), .q(q), .q_bar(q_bar));
+	
+	
+	always begin
+	
+		#10 clk = ~clk;
+	end
+	
+	initial begin
+		clk =0; d=0;
+		#10 d=1;
+		#10 d=0;
+		#10 d=1;
+		#10 d=0;
+		
+	end
+endmodule

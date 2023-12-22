@@ -1,0 +1,31 @@
+module cla_clk (a,b,ci,clk,co,s);// module name cla_clk
+	input clk;// 1bit input signal clk
+	input [31:0] a,b;// 32bit input signal a,b
+	input ci;// 1bit input signal ci
+	output [31:0] s;// 32bit output signal s
+	output co;// 1bit output signal co
+	
+	reg [31:0] reg_a, reg_b; // 32bit register of input reg_a,reg_b
+	reg reg_ci;// 1bit register reg_ci
+	reg [31:0] reg_s;// 32bit register of sum s
+	reg reg_co;// 1bit register of carry out co
+	
+	wire [31:0] wire_s; // 32bit wire wire_s
+	wire wire_co;// 1bit wire wire_co
+	
+	always @ (posedge clk)// clk at rising edge
+	begin// rising edge, start
+		reg_a <=a; // store a value to reg_a
+		reg_b <=b;// store b value to reg_b
+		reg_ci <=ci;// store ci value to reg_ci
+		reg_s <=wire_s;// store wire_s value to reg_s
+		reg_co <= wire_co; // store wire_co value to reg_co
+	
+	end
+	// instance name u0_cla32, use cla32 module
+	cla32 u0_cla32 (.a(reg_a), .b(reg_b), .ci(reg_ci), .co(wire_co), .s(wire_s));
+	
+	assign s = reg_s; // assign reg_s to s
+	assign co = reg_co;// assign reg_co to co
+
+endmodule

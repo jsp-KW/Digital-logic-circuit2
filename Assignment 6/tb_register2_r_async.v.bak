@@ -1,0 +1,34 @@
+`timescale 1ns/100ps
+
+module tb_register2_r_async;
+
+  reg D1, D0, clk, reset_n;
+  wire Q1, Q0;
+
+   _register2_r_async test (.D1(D1), .D0(D0), .clk(clk), .reset_n(reset_n), .Q1(Q1), .Q0(Q0));
+
+	
+	initial begin
+    D1 = 0;
+    D0 = 0;
+    clk = 0;
+    reset_n = 0;
+    
+    reset_n = 1;
+    #10;
+    
+    forever begin
+      #5 clk = ~clk;
+    end
+
+    D1 = 1;
+    D0 = 0;
+    #10;
+
+    D1 = 0;
+    D0 = 1;
+    #10;
+
+	 
+	 end 
+endmodule

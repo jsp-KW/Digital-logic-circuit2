@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/fa_v2.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/clb4.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/cla4.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/gates.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/cla8.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/os_logic.v}
+
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Assignment7-1 {C:/intelFPGA_lite/18.1/Assignment7-1/tb_os_logic.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_os_logic
+
+add wave *
+view structure
+view signals
+run -all

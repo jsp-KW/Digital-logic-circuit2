@@ -1,0 +1,33 @@
+`timescale 1ns/100ps
+
+//3-bit resettable register with active low asynchronous reset testbench module
+module tb_register3_r;
+
+   reg clk,reset_n,D2,D1,D0;      //1 bit size reg
+   wire Q2,Q1,Q0;                  //1 bit size wire
+   
+   _register3_r test(clk,reset_n,D2,D1,D0,Q2,Q1,Q0);      //test module
+   
+   //make clock
+   always begin
+   #5; clk=~clk;
+   end
+   
+   initial begin
+   //when reset_n=0
+   clk=0; reset_n=0; D2=0; D1=0; D0=0;
+   
+   //when reset_n=1
+   #20; reset_n=1;
+   #10;    D2=0; D1=0; D0=1;
+   #10;    D2=0; D1=1; D0=0;
+   #10;    D2=0; D1=1; D0=1;
+   #10;   D2=1; D1=0; D0=0;
+   #10;    D2=1; D1=0; D0=1;
+   #10;    D2=1; D1=1; D0=0;
+   #10;    D2=1; D1=1; D0=1;
+   #10;
+   //when reset_n=0;
+   reset_n=0;
+   end
+endmodule

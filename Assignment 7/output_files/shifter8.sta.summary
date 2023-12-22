@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'op[0]'
+Slack : -3.829
+TNS   : -28.696
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -0.806
+TNS   : -6.147
+
+Type  : Slow 1100mV 85C Model Hold 'op[0]'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -4.190
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'op[0]'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'op[0]'
+Slack : -3.960
+TNS   : -29.833
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -1.022
+TNS   : -7.817
+
+Type  : Slow 1100mV 0C Model Hold 'op[0]'
+Slack : 0.734
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -4.548
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'op[0]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'op[0]'
+Slack : -2.404
+TNS   : -17.281
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : 0.546
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.499
+TNS   : -3.824
+
+Type  : Fast 1100mV 85C Model Hold 'op[0]'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.080
+TNS   : -0.632
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'op[0]'
+Slack : 0.003
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'op[0]'
+Slack : -2.188
+TNS   : -15.995
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : 0.629
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.577
+TNS   : -4.427
+
+Type  : Fast 1100mV 0C Model Hold 'op[0]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.082
+TNS   : -0.644
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'op[0]'
+Slack : -0.019
+TNS   : -0.112
+
+------------------------------------------------------------

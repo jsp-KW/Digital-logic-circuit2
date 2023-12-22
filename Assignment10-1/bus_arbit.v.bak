@@ -1,0 +1,4 @@
+module bus_arbit(clk, reset_n, m0_req,m1_req, m0_grant, m1_grant);
+
+
+endmodule
